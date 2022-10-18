@@ -19,7 +19,7 @@ cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers
 e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
 ```yml
 rosboard:
-    image: ${REPO_URL}amr-rosboard:${DOCKER_TAG:-latest}
+    image: ${REPO_URL}amr-ros-base:${DOCKER_TAG:-latest}
     container_name: ${CONTAINER_NAME_PREFIX:-amr-}rosboard
     extends:
       file:  ../common/container-launch-env.yml
@@ -32,6 +32,9 @@ rosboard:
       - collab-slam
     command:
       - |
+        cd /home/eiforamr/ros2_ws/src
+        sudo git clone https://github.com/dheera/rosboard.git
+        pip3 install tornado simplejpeg
         source /opt/ros/foxy/setup.bash 
         /home/eiforamr/ros2_ws/src/rosboard/run
 
