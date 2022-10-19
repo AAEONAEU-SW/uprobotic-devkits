@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+
+  rosboard:
+    image: ${REPO_URL}amr-ros-base:${DOCKER_TAG:-latest}
+    container_name: ${CONTAINER_NAME_PREFIX:-amr-}rosboard
+    extends:
+      file:  ../common/container-launch-env.yml
+      service: container-launch-env
+    build:
+      target: ros-base
+    depends_on:
+      - aaeon-amr-interface
+      - nav2
+      - collab-slam
+    command:
+      - |
+        cd /home/eiforamr/ros2_ws/src
+        sudo git clone https://github.com/dheera/rosboard.git
+        pip3 install tornado simplejpeg
+        source /opt/ros/foxy/setup.bash 
+        /home/eiforamr/ros2_ws/src/rosboard/run

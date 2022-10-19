@@ -61,9 +61,9 @@ export ROS_DOMAIN_ID=27
 docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml up
 ```
 
-4. Now access the Dashboard at ```//localhost:8888``` 
+4. Now access the Dashboard at ```http://localhost:8888``` 
 
-5. For a remote connection enable the WiFi-Hotspot of the robot and acquire the IP address with the
+5. For a remote connection, enable the WiFi-Hotspot of the robot and acquire the IP address with the
 ```ip addr``` command.
 
 6. Use any device to connect to the robots WiFi and point your web browser at ```http://<robot-ip>:8888/```
