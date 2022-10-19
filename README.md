@@ -7,11 +7,13 @@
 
 List of tested dashboards for monitoring ROS topics and debugging the AMR remotely. 
 
-1. **[Foxglove Studio](https://foxglove.dev/studio)**
+1. **ROSboard**
+- Robotic Kit  [Setup Instructions](/docs/rosboard/README.md)
+
+2. **Foxglove Studio**
  - Robotic Kit  [Setup Instructions](/docs/foxglove_studio/README.md)
 
-2. **[ROSboard](https://github.com/dheera/rosboard)**
-- Robotic Kit  [Setup Instructions](/docs/rosboard/README.md)
+
 
 
 
