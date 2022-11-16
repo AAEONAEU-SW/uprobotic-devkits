@@ -17,7 +17,7 @@ cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers
 2. Append the following  _rosbridge-suite_ service to the Compose file of the application you would like to run 
 e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
 ```yml
-rosbridge-suite:
+  rosbridge-suite:
     image: ${REPO_URL}amr-ros-base:${DOCKER_TAG:-latest}
     container_name: ${CONTAINER_NAME_PREFIX:-amr-}rosbridge-suite
     extends:
@@ -38,6 +38,7 @@ rosbridge-suite:
 ```
 
 3. Save the Compose file
+> **_NOTE:_**  Ensure the correct line spacing when appending the yml file.
 
 ## Run
 To start the dashboard, launch your application as usually.
@@ -60,12 +61,10 @@ docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering_
 
 4. Open the [Foxglove web app](https://studio.foxglove.dev/) or [desktop app](https://foxglove.dev/download) and open a connection to the rosbridge-server  at ```ws://localhost:9090``` 
 
-5. For a remote connection enable the WiFi-Hotspot of the robot and acquire the IP address with
-```
-ip addr
-```
+5. For a remote connection, connect to a WiFi network and acquire the robots IP address with the
+```ip addr``` command.
 
-6. Use any device to connect to the robots WiFi network and use  ```ws://<robot-ip>:9090/``` when opening a connection in Foxglove Studio
+6. Use any device to connected to the same network and use  ```ws://<robot-ip>:9090/``` when opening a connection in Foxglove Studio
 
 
 
