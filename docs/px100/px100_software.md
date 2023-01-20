@@ -16,7 +16,7 @@ chmod +x xsarm_amd64_install.sh
 ```
 - #### Ensure correct installation with the manipulator connected and powered on
 ```bash
-ls /dev | grep ttyDXL # check that the U2D2 interface is found
+ls /dev | grep ttyDXL # check that the U2D2 interface is online
 ttyDXL
 ```
 
@@ -31,8 +31,8 @@ ros2 launch interbotix_xsarm_perception xsarm_perception.launch.py robot_model:=
 ```
 - #### Power off the servos and move the AprilTag into the FOV of the camera
 ```bash
-ros2 service call /px100/torque_enable interbotix_xs_msgs/srv/TorqueEnable "{cmd_type: 'group', name: 'all', enable: false}"
 # Caution this collapses the manipulator
+ros2 service call /px100/torque_enable interbotix_xs_msgs/srv/TorqueEnable "{cmd_type: 'group', name: 'all', enable: false}"
 ```
 
 - #### Power the servos back on with the same service call
@@ -45,7 +45,7 @@ ros2 service call /px100/torque_enable interbotix_xs_msgs/srv/TorqueEnable "{cmd
 - Validate the position of the AprilTag with RViz. 
 The STL model should line up with the pointcloud pattern of the AprilTag pattern.
 
-<img src="https://user-images.githubusercontent.com/13176191/213814735-3151e64b-be32-48a6-b247-ecff376d5426.png"  width="733" height="535">
+<img src="https://user-images.githubusercontent.com/13176191/213814735-3151e64b-be32-48a6-b247-ecff376d5426.png"  width="730" height="535">
 
 ## **Run Demo**
 - #### To pick up small objects in the FOV of the camera run the demo script.
