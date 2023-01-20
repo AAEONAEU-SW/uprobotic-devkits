@@ -2,14 +2,14 @@
 # Assembly
 Check the [Assembly Manual](/docs/px100/px100_assembly.md)
 # Software
-Check this [Getting Started Guide]()
-# Bill of Materials
+Check the [Software Setup Guide](/docs/px100/px100_software.md)
+# Component list
 
 ### 1. Electronics & Electromechanicals
 
 | id  | Part                       | Description                                  | Qty |
 | --- | -------------------------- | -------------------------------------------- | --- |
-| E01 | Intel Realsense D405      | Close range depth camera                        | 1   |
+| E01 | Intel Realsense D405      | Close range depth camera                            | 1   |
 | E02 | Pincher X100      | Interbotix ROS 2 manipulator                         | 1   |
 
 ### 2. Mechanicals
@@ -32,4 +32,5 @@ Check this [Getting Started Guide]()
 The 3D printable STL files as well as the original STEP files can be found [here]().
 
 
-# Demo
+
+
