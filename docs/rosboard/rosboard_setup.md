@@ -1,15 +1,15 @@
 # ROSboard Setup Instructions
 
 ## Prerequisites 
-
+---
 - Robotic Kit with [PSU](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#power-supply) and [Operating System](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#operating-system-installation) installed
 
 - [Edge Insights for AMR](https://www.intel.com/content/www/us/en/develop/documentation/ei4amr-2022-2-get-started-robot-kit/top/download-ei4amr.html) installed
 
 
 ## Setup
-
-1. Locate the Docker Compose files inside the _AMR_containers_ folder.
+---
+1. Locate the Docker Compose files inside the `AMR_containers` folder.
 ```bash
 cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers/01_docker_sdk_env/docker_compose/05_tutorials
 ```
@@ -28,8 +28,6 @@ e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
       target: ros-base
     depends_on:
       - aaeon-amr-interface
-      - nav2
-      - collab-slam
     command:
       - |
         cd /home/eiforamr/ros2_ws/src
@@ -41,11 +39,12 @@ e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
 ```
 
 3. Save the Compose file
-> **_NOTE:_**  Ensure the correct line spacing when appending the yml file.
+> **NOTE:**  Ensure the correct line spacing when appending the yml file.
 
 ## Run
+---
 To start the dashboard, launch your application as usually.
-1. Got to the installation folder of EI for AMR and locate the _AMR_containers_ folder
+1. Got to the installation folder of EI for AMR and locate the `AMR_containers` folder
 
 ```bash
 cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers
@@ -70,7 +69,6 @@ docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering_
 6. Use any device connected to the same network and point your web browser at ```http://<robot-ip>:8888/```
 
 
-
----
 ## Credits
+---
 [Rosboard](https://github.com/dheera/rosboard)  Copyright (c) 2021, Dheera Venkatraman BSD 3-Clause License

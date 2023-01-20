@@ -1,3 +1,8 @@
+
+# Assembly
+Check the [Assembly Manual](/docs/px100/px100_assembly.md)
+# Software
+Check this [Getting Started Guide]()
 # Bill of Materials
 
 ### 1. Electronics & Electromechanicals
@@ -17,7 +22,7 @@
 | M04 | M4x5              | M4 screw of 5mm lenght                                                   | 4  |
                         
 
-### 3. 3D Printable
+### 3. 3D Prints
 
 | id  | Part                     | Description                                                    | Qty |
 | --- | ------------------------ | -------------------------------------------------------------- | --- |
@@ -25,9 +30,6 @@
 | P02 | AR tag plate                | Square plate the AR tag is located on                                         | 1   |
 
 The 3D printable STL files as well as the original STEP files can be found [here]().
-# Assembly
-Check the [Assembly Manual](/docs/px100/px100_assembly.md)
-# Software
-Check this [Getting Started Guide]()
+
 
 # Demo
