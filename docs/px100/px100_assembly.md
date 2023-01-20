@@ -1,0 +1,1 @@
+The assembly guide will be available soon
