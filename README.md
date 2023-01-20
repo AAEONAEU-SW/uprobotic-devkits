@@ -2,13 +2,9 @@
 
 ## 1. ROS 2 Dashboards
 List of tested dashboards for monitoring ROS topics and debugging the AMR remotely. 
-
-- [x] **ROSboard** 
-[Setup Instructions](/docs/rosboard/README.md)
-
-- [ ] **Foxglove Studio** 
-[Setup Instructions](/docs/foxglove_studio/README.md)
-
+- [x] **[Foxglove Studio](/docs/foxglove_studio/foxglove_setup.md)**
+- [x] **[ROSboard](/docs/rosboard/rosboard_setup.md)** 
+ 
 ---
 
 ## 2. ROS 2 Manipulator
