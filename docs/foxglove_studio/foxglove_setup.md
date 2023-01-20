@@ -1,20 +1,20 @@
 # Foxglove Studio Setup Instructions
 ## Prerequisites 
-
+---
 - Robotic Kit with [PSU](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#power-supply) and [Operating System](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#operating-system-installation) installed
 
 - [Edge Insights for AMR](https://www.intel.com/content/www/us/en/develop/documentation/ei4amr-2022-2-get-started-robot-kit/top/download-ei4amr.html) installed
 
 
 ## Setup
-
-1. Locate the Docker Compose files inside the _AMR_containers_ folder
+---
+1. Locate the Docker Compose files inside the `AMR_containers` folder
 ```bash
 cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers/01_docker_sdk_env/docker_compose/05_tutorials
 ```
 
 
-2. Append the following  _rosbridge-suite_ service to the Compose file of the application you would like to run 
+2. Append the following  `rosbridge-suite` service to the Compose file of the application you would like to run 
 e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
 ```yml
   rosbridge-suite:
@@ -27,22 +27,20 @@ e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
       target: ros-base
     depends_on:
       - aaeon-amr-interface
-      - nav2
-      - collab-slam
     command:
       - |
-        sudo apt-get update
-        sudo apt install ros-foxy-rosbridge-server -y
+        apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -q -y  ros-foxy-rosbridge-suite
         source /opt/ros/foxy/setup.bash
         ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ```
 
 3. Save the Compose file
-> **_NOTE:_**  Ensure the correct line spacing when appending the yml file.
+> **NOTE:** Ensure correct line spacing when appending the yml file.
 
 ## Run
+---
 To start the dashboard, launch your application as usually.
-1. Got to the installation folder of EI for AMR and locate the _AMR_containers_ folder
+1. Got to the installation folder of EI for AMR and locate the `AMR_containers` folder
 
 ```bash
 cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers
@@ -54,7 +52,7 @@ source 01_docker_sdk_env/docker_compose/common/docker_compose.source
 export CONTAINER_BASE_PATH=`pwd`
 export ROS_DOMAIN_ID=27
 ```
-3. Start the application as usually with
+3. Start the tutorial or application containers as usually with
 ```bash
 docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml up
 ```
@@ -69,7 +67,8 @@ docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering_
 
 
 
----
+
 ## Credits
+---
 [Foxglove Studio](https://github.com/foxglove/studio)
 
