@@ -2,9 +2,9 @@
 Currently only ROS 2 Galactic has been tested with plans for Humble once the [EI for AMR SDK](https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/edge-solutions/autonomous-mobile-robots/overview.html) eventually updates to Ubuntu 22.04 Jammy Jellyfish release.
 
  - #### Ubuntu 20.04: 
-   [x] [ROS 2 Galactic]()
+   - [x] [ROS 2 Galactic]()
  - #### Ubuntu 22.04:
-   [] [ROS 2 Humble]()
+   - [ ] [ROS 2 Humble]()
 
 ## **Installation**
 - #### Download and run the installation script to install ROS 2 and the software packages 
@@ -21,8 +21,7 @@ ttyDXL
 ```
 
 ## **Camera-to-Arm Calibration**
----
-The calibration procedure must be completed once after intial installation and can be integrated into any programme when adjustment is required later. 
+### The calibration procedure must be completed once after intial installation and can be integrated into any programme when adjustment is required later. 
 
 To get the static transform of the camera in the manipulators coordinate system follow these steps: 
 - #### From the `ros2_ws` folder launch the perception packages and calibration tools
@@ -40,11 +39,15 @@ ros2 service call /px100/torque_enable interbotix_xs_msgs/srv/TorqueEnable "{cmd
 ```bash
 ros2 service call /px100/torque_enable interbotix_xs_msgs/srv/TorqueEnable "{cmd_type: 'group', name: 'all', enable: true}"
 ```
-- #### From the ArmTag Tuner GUI snap the Tags pose and save the configuration
-Validate the position of the AprilTag with RViz. The STL model should line up with the pointcloud pattern of the AprilTag pattern.
+- #### From the ArmTag Tuner GUI, Snap the tags Pose and save the configuration
+<img src="https://user-images.githubusercontent.com/13176191/213815335-7a1a3866-a459-496e-907c-1864c787a4a2.png" >
+
+- Validate the position of the AprilTag with RViz. 
+The STL model should line up with the pointcloud pattern of the AprilTag pattern.
+
+<img src="https://user-images.githubusercontent.com/13176191/213814735-3151e64b-be32-48a6-b247-ecff376d5426.png"  width="733" height="535">
 
 ## **Run Demo**
----
 - #### To pick up small objects in the FOV of the camera run the demo script.
 ```bash
 cd ~/ros2_ws/interbotix_ros_manipulators_uprobotic_devkits/interbotix_ros_xsarms/interbotix_xsarm_perception/demos
