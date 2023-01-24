@@ -1,13 +1,11 @@
 # Foxglove Studio Setup Instructions
 ## Prerequisites 
----
 - Robotic Kit with [PSU](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#power-supply) and [Operating System](https://github.com/up-board/up-community/wiki/UP-Robotic-Development-Kit-QSG#operating-system-installation) installed
 
 - [Edge Insights for AMR](https://www.intel.com/content/www/us/en/develop/documentation/ei4amr-2022-2-get-started-robot-kit/top/download-ei4amr.html) installed
 
-
-## Setup
 ---
+## Setup
 1. Locate the Docker Compose files inside the `AMR_containers` folder
 ```bash
 cd <ei_for_amr_path>/Edge_Insights_for_Autonomous_Mobile_Robots_*/AMR_containers/01_docker_sdk_env/docker_compose/05_tutorials
@@ -38,7 +36,6 @@ e.g. _aaeon_wandering__aaeon_realsense_collab_slam_fm_nav2_ukf.tutorial.yml_
 > **NOTE:** Ensure correct line spacing when appending the yml file.
 
 ## Run
----
 To start the dashboard, launch your application as usually.
 1. Got to the installation folder of EI for AMR and locate the `AMR_containers` folder
 
@@ -67,8 +64,7 @@ docker-compose -f 01_docker_sdk_env/docker_compose/05_tutorials/aaeon_wandering_
 
 
 
-
-## Credits
 ---
+## Credits
 [Foxglove Studio](https://github.com/foxglove/studio)
 
