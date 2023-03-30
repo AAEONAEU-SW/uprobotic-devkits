@@ -6,14 +6,21 @@ Currently only ROS 2 Galactic has been tested with plans for Humble once the [EI
  - #### Ubuntu 22.04:
    - [ ] [ROS 2 Humble]()
 
-## **Installation**
-- #### Download and run the installation script to install ROS 2 and the software packages 
+## Installation
+Download the installation script and make it executable. 
 ```bash
-sudo apt install curl
-curl 'https://raw.githubusercontent.com/hcdiekmann/interbotix_ros_manipulators_uprobotic_devkits/galactic/interbotix_ros_xsarms/install/amd64/xsarm_amd64_install.sh' > xsarm_amd64_install.sh
-chmod +x xsarm_amd64_install.sh
-./xsarm_amd64_install.sh -d galactic
+curl 'https://raw.githubusercontent.com/hcdiekmann/UP-robotic-manipulators/main/amd64_install.sh' > amd64_install.sh
+chmod +x amd64_install.sh
 ```
+Execute the script with optional flags.
+```bash
+./amd64_install.sh [-h][-d DISTRO][-p PATH]
+```
+| Flag     | Description |
+| ----------- | ----------- |
+| -h   | Help message on script usage.                                                                  |
+| -d   | ROS 2 distro. If not given, installs the ROS distro compatible with your Ubuntu version.        |
+| -p   | Absolute installation path for the ROS workspace                                               |
 - #### Ensure correct installation with the manipulator connected and powered on
 ```bash
 ls /dev | grep ttyDXL # check that the U2D2 interface is online
