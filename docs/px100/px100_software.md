@@ -1,10 +1,12 @@
 # Software Setup Guide
-Currently only ROS 2 Galactic has been tested with plans for Humble once the [EI for AMR SDK](https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/edge-solutions/autonomous-mobile-robots/overview.html) eventually updates to Ubuntu 22.04 Jammy Jellyfish release.
+The UP robotic devkit supports the following ROS 2 distributions for interfacing with the PX100 manipulator:
 
  - #### Ubuntu 20.04: 
    - [x] [ROS 2 Galactic]()
  - #### Ubuntu 22.04:
-   - [ ] [ROS 2 Humble]()
+   - [x] [ROS 2 Humble]()
+
+> **Humble** is the recommended distro and also available as a [Docker image]().
 
 ## Installation
 Download the installation script and make it executable. 
