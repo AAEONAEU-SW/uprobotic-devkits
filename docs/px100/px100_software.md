@@ -2,11 +2,11 @@
 The UP robotic devkit supports the following ROS 2 distributions for interfacing with the PX100 manipulator:
 
  - #### Ubuntu 20.04: 
-   - [x] [ROS 2 Galactic]()
+   - [x] [ROS 2 Galactic](https://github.com/hcdiekmann/UP-robotic-manipulators/tree/galactic)
  - #### Ubuntu 22.04:
-   - [x] [ROS 2 Humble]()
+   - [x] [ROS 2 Humble](https://github.com/hcdiekmann/UP-robotic-manipulators/tree/humble)
 
-> **Humble** is the recommended distro and also available as a [Docker image]().
+> **Humble** is the recommended distro as it supports [Docker](https://github.com/hcdiekmann/UP-robotic-manipulators/blob/humble/Dockerfile).
 
 ## Installation
 Download the installation script and make it executable. 
