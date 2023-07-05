@@ -1,5 +1,3 @@
-The complete assembly guide will be available soon
-
 # Component list
 
 ### 1. Electronics & Electromechanicals
@@ -27,3 +25,5 @@ The complete assembly guide will be available soon
 | P02 | AR tag plate                | Square plate the AR tag is located on                                         | 1   |
 
 > The 3D printable STL files as well as the original STEP files can be found [here](/src/manipulators/px100/3D_prints/).
+
+# Assembly
